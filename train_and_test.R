@@ -91,7 +91,7 @@ for (i in 1:10){
   mtl_model[[i]]=MTL(data_mtl, Y_mtl, type = "Classification", Regularization = "L21",Lam1 = cvfitr$Lam1.min, Lam1_seq = NULL, Lam2 = 0, opts = list(init = 0, tol
                                                                                                                                                      = 10^-3, maxIter = 1000), G = NULL, k = 2)
   
-  error[i]= calcError(mtl_model, newX=data_mtl_tst, newY=Y_mtl_tst)
+  error[i]= calcError(mtl_model[[i]], newX=data_mtl_tst, newY=Y_mtl_tst)
   print(i)
 }
 
