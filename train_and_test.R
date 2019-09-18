@@ -16,7 +16,7 @@ library(kernlab)
 # a=specc(t(mut_data), centers=9)
 # Y_mtl[[4]]= a@.Data
 
-load(mtl_data.RData)
+load('mtl_data.RData')
 print('creating train and test data')
 ##create train and test data
 train_mtl=list()
