@@ -82,6 +82,7 @@ for (i in 1:10){
 ######strat training and calculating error on test set
 print('strat training and calculating error on test set')
 mtl_model=list()
+error=array()
 for (i in 1:10){
   data_mtl=train_set[[i]]
   Y_mtl=y_train[[i]]
