@@ -91,7 +91,7 @@ for (i in 1:1){
   cvfitr <- cvMTL(data_mtl, Y_mtl, type="Regression", Regularization="L21", Lam1_seq=10^seq(1,-4, -1),  Lam2=0, opts=list(init=0,  tol=10^-6, maxIter=1500), nfolds=5, stratify=FALSE, parallel=FALSE)
   
   mtl_model[[i]]=MTL(data_mtl, Y_mtl, type = "Classification", Regularization = "L21",Lam1 = cvfitr$Lam1.min, Lam1_seq = NULL, Lam2 = 0, opts = list(init = 0, tol
-                                                                                                                                                     = 10^-3, maxIter = 1000), G = NULL, k = 2)
+                                                                                                                                                     = 10^-3, maxIter = 10000), G = NULL, k = 2)
   
   error[i]= calcError(mtl_model[[i]], newX=data_mtl_tst, newY=Y_mtl_tst)
   print(i)
