@@ -1,9 +1,9 @@
-load(mtl_data.RData)
+#load(mtl_data.RData)
 mtl_data=list()
 uniq_cell=unique(cell_type)
 Y_mtl=list()
 for(i in 1:length(uniq_cell)){
-  mtl_data[[i]]= t(datafiltfinal[,which(cell_type==uniq_cell[i])])
+#  mtl_data[[i]]= t(datafiltfinal[,which(cell_type==uniq_cell[i])])
   a=matrix(-1,ncol(datafiltfinal),1)
   a[which(cell_type==uniq_cell[i]),1]=1
   Y_mtl[[i]]=a
